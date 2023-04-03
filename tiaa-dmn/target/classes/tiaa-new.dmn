@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_03hhdyb" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.8.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="tiaa" name="TIAA">
+    <decisionTable id="DecisionTable_168lmku">
+      <input id="Input_1" label="Age">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_14obyr6" label="Employee Type">
+        <inputExpression id="LiteralExpression_195g4qy" typeRef="string">
+          <text>employeeType</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Plan" name="plan" typeRef="string" />
+      <rule id="DecisionRule_0kq6tx4">
+        <inputEntry id="UnaryTests_0r7fqfd">
+          <text>25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pnkipl">
+          <text>"Manager"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r6nd45">
+          <text>"TIAA-200"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rd16b3">
+        <inputEntry id="UnaryTests_0vp6q77">
+          <text>40</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oae5ke">
+          <text>"Software Developer"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uyrpf9">
+          <text>"TIAA-400"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l8dw94">
+        <inputEntry id="UnaryTests_0geag79">
+          <text>80</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ef3eah">
+          <text>"Director"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q4s25a">
+          <text>"TIAA-800"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="tiaa">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
